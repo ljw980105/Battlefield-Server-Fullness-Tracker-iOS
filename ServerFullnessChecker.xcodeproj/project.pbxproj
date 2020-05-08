@@ -1,0 +1,646 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 52;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0425FFE22465F925000BB91B /* BattlelogServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0425FFE12465F925000BB91B /* BattlelogServer.swift */; };
+		0425FFE524660171000BB91B /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 0425FFE424660171000BB91B /* Kingfisher */; };
+		042E26DC245F8B1B005CFFC9 /* UIButton+Combine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042E26DB245F8B1B005CFFC9 /* UIButton+Combine.swift */; };
+		042E26E0245F9591005CFFC9 /* ServerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042E26DE245F9591005CFFC9 /* ServerTableViewCell.swift */; };
+		042E26E1245F9591005CFFC9 /* ServerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 042E26DF245F9591005CFFC9 /* ServerTableViewCell.xib */; };
+		043B4365245B9CFE00A5E704 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043B4364245B9CFE00A5E704 /* AppDelegate.swift */; };
+		043B4367245B9CFE00A5E704 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043B4366245B9CFE00A5E704 /* SceneDelegate.swift */; };
+		043B436C245B9CFE00A5E704 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 043B436A245B9CFE00A5E704 /* Main.storyboard */; };
+		043B436E245B9CFF00A5E704 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 043B436D245B9CFF00A5E704 /* Assets.xcassets */; };
+		043B4371245B9CFF00A5E704 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 043B436F245B9CFF00A5E704 /* LaunchScreen.storyboard */; };
+		043B437C245B9CFF00A5E704 /* ServerFullnessCheckerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043B437B245B9CFF00A5E704 /* ServerFullnessCheckerTests.swift */; };
+		043B4389245B9F5600A5E704 /* NotificationHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043B4388245B9F5600A5E704 /* NotificationHandler.swift */; };
+		043B438B245C8F0400A5E704 /* ServerTrackerAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043B438A245C8F0400A5E704 /* ServerTrackerAPI.swift */; };
+		043B438E245C91F700A5E704 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 043B438D245C91F700A5E704 /* Alamofire */; };
+		043B4390245C94B100A5E704 /* ServerResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043B438F245C94B100A5E704 /* ServerResponse.swift */; };
+		043B4393245CA3CE00A5E704 /* BattlefieldServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043B4392245CA3CE00A5E704 /* BattlefieldServer.swift */; };
+		043B4399245CCA3E00A5E704 /* GenericPickerViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043B4396245CCA3E00A5E704 /* GenericPickerViewDelegate.swift */; };
+		043B439A245CCA3E00A5E704 /* GenericPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043B4397245CCA3E00A5E704 /* GenericPickerViewController.swift */; };
+		043B439B245CCA3E00A5E704 /* GenericPickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 043B4398245CCA3E00A5E704 /* GenericPickerViewController.xib */; };
+		047AC6A4245CCD9300D07A1D /* AddServerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047AC6A2245CCD9300D07A1D /* AddServerViewController.swift */; };
+		047AC6A5245CCD9300D07A1D /* AddServerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 047AC6A3245CCD9300D07A1D /* AddServerViewController.xib */; };
+		047AC6A8245CD97400D07A1D /* UITextField+ClearStyling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047AC6A7245CD97400D07A1D /* UITextField+ClearStyling.swift */; };
+		047AC6AA245F7D5500D07A1D /* MutedResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047AC6A9245F7D5500D07A1D /* MutedResponse.swift */; };
+		047AC6AC245F7DE500D07A1D /* Alamofire+TypedJSONResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047AC6AB245F7DE500D07A1D /* Alamofire+TypedJSONResponse.swift */; };
+		047AC6AE245F83B200D07A1D /* ServersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047AC6AD245F83B200D07A1D /* ServersViewController.swift */; };
+		049EC7ED245F999600E2A83E /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049EC7EC245F999600E2A83E /* Game.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		043B4378245B9CFF00A5E704 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 043B4359245B9CFE00A5E704 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 043B4360245B9CFE00A5E704;
+			remoteInfo = ServerFullnessChecker;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0425FFE12465F925000BB91B /* BattlelogServer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattlelogServer.swift; sourceTree = "<group>"; };
+		042E26DB245F8B1B005CFFC9 /* UIButton+Combine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Combine.swift"; sourceTree = "<group>"; };
+		042E26DE245F9591005CFFC9 /* ServerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerTableViewCell.swift; sourceTree = "<group>"; };
+		042E26DF245F9591005CFFC9 /* ServerTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServerTableViewCell.xib; sourceTree = "<group>"; };
+		043B4361245B9CFE00A5E704 /* BF Server Checker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BF Server Checker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		043B4364245B9CFE00A5E704 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		043B4366245B9CFE00A5E704 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		043B436B245B9CFE00A5E704 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		043B436D245B9CFF00A5E704 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		043B4370245B9CFF00A5E704 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		043B4372245B9CFF00A5E704 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		043B4377245B9CFF00A5E704 /* ServerFullnessCheckerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ServerFullnessCheckerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		043B437B245B9CFF00A5E704 /* ServerFullnessCheckerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerFullnessCheckerTests.swift; sourceTree = "<group>"; };
+		043B437D245B9CFF00A5E704 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		043B4386245B9D1300A5E704 /* ServerFullnessChecker.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ServerFullnessChecker.entitlements; sourceTree = "<group>"; };
+		043B4388245B9F5600A5E704 /* NotificationHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationHandler.swift; sourceTree = "<group>"; };
+		043B438A245C8F0400A5E704 /* ServerTrackerAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerTrackerAPI.swift; sourceTree = "<group>"; };
+		043B438F245C94B100A5E704 /* ServerResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerResponse.swift; sourceTree = "<group>"; };
+		043B4392245CA3CE00A5E704 /* BattlefieldServer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattlefieldServer.swift; sourceTree = "<group>"; };
+		043B4396245CCA3E00A5E704 /* GenericPickerViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenericPickerViewDelegate.swift; sourceTree = "<group>"; };
+		043B4397245CCA3E00A5E704 /* GenericPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenericPickerViewController.swift; sourceTree = "<group>"; };
+		043B4398245CCA3E00A5E704 /* GenericPickerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GenericPickerViewController.xib; sourceTree = "<group>"; };
+		047AC6A2245CCD9300D07A1D /* AddServerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddServerViewController.swift; sourceTree = "<group>"; };
+		047AC6A3245CCD9300D07A1D /* AddServerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddServerViewController.xib; sourceTree = "<group>"; };
+		047AC6A7245CD97400D07A1D /* UITextField+ClearStyling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+ClearStyling.swift"; sourceTree = "<group>"; };
+		047AC6A9245F7D5500D07A1D /* MutedResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MutedResponse.swift; sourceTree = "<group>"; };
+		047AC6AB245F7DE500D07A1D /* Alamofire+TypedJSONResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Alamofire+TypedJSONResponse.swift"; sourceTree = "<group>"; };
+		047AC6AD245F83B200D07A1D /* ServersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServersViewController.swift; sourceTree = "<group>"; };
+		049EC7EC245F999600E2A83E /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		043B435E245B9CFE00A5E704 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0425FFE524660171000BB91B /* Kingfisher in Frameworks */,
+				043B438E245C91F700A5E704 /* Alamofire in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		043B4374245B9CFF00A5E704 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		042E26DD245F9573005CFFC9 /* Show Servers */ = {
+			isa = PBXGroup;
+			children = (
+				047AC6AD245F83B200D07A1D /* ServersViewController.swift */,
+				042E26DE245F9591005CFFC9 /* ServerTableViewCell.swift */,
+				042E26DF245F9591005CFFC9 /* ServerTableViewCell.xib */,
+			);
+			path = "Show Servers";
+			sourceTree = "<group>";
+		};
+		043B4358245B9CFE00A5E704 = {
+			isa = PBXGroup;
+			children = (
+				043B4363245B9CFE00A5E704 /* ServerFullnessChecker */,
+				043B437A245B9CFF00A5E704 /* ServerFullnessCheckerTests */,
+				043B4362245B9CFE00A5E704 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		043B4362245B9CFE00A5E704 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				043B4361245B9CFE00A5E704 /* BF Server Checker.app */,
+				043B4377245B9CFF00A5E704 /* ServerFullnessCheckerTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		043B4363245B9CFE00A5E704 /* ServerFullnessChecker */ = {
+			isa = PBXGroup;
+			children = (
+				042E26DD245F9573005CFFC9 /* Show Servers */,
+				047AC6A1245CCD7D00D07A1D /* Add Server */,
+				043B4394245CCA2100A5E704 /* Custom Views */,
+				043B4387245B9F4400A5E704 /* Models */,
+				043B4386245B9D1300A5E704 /* ServerFullnessChecker.entitlements */,
+				043B4364245B9CFE00A5E704 /* AppDelegate.swift */,
+				043B4366245B9CFE00A5E704 /* SceneDelegate.swift */,
+				043B436A245B9CFE00A5E704 /* Main.storyboard */,
+				043B436D245B9CFF00A5E704 /* Assets.xcassets */,
+				043B436F245B9CFF00A5E704 /* LaunchScreen.storyboard */,
+				043B4372245B9CFF00A5E704 /* Info.plist */,
+			);
+			path = ServerFullnessChecker;
+			sourceTree = "<group>";
+		};
+		043B437A245B9CFF00A5E704 /* ServerFullnessCheckerTests */ = {
+			isa = PBXGroup;
+			children = (
+				043B437B245B9CFF00A5E704 /* ServerFullnessCheckerTests.swift */,
+				043B437D245B9CFF00A5E704 /* Info.plist */,
+			);
+			path = ServerFullnessCheckerTests;
+			sourceTree = "<group>";
+		};
+		043B4387245B9F4400A5E704 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				047AC6A6245CD95E00D07A1D /* Extensions */,
+				043B4391245CA36A00A5E704 /* ServerTracker */,
+				043B4388245B9F5600A5E704 /* NotificationHandler.swift */,
+				049EC7EC245F999600E2A83E /* Game.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		043B4391245CA36A00A5E704 /* ServerTracker */ = {
+			isa = PBXGroup;
+			children = (
+				043B438A245C8F0400A5E704 /* ServerTrackerAPI.swift */,
+				043B438F245C94B100A5E704 /* ServerResponse.swift */,
+				043B4392245CA3CE00A5E704 /* BattlefieldServer.swift */,
+				047AC6A9245F7D5500D07A1D /* MutedResponse.swift */,
+				0425FFE12465F925000BB91B /* BattlelogServer.swift */,
+			);
+			path = ServerTracker;
+			sourceTree = "<group>";
+		};
+		043B4394245CCA2100A5E704 /* Custom Views */ = {
+			isa = PBXGroup;
+			children = (
+				043B4395245CCA2800A5E704 /* PickerView */,
+			);
+			path = "Custom Views";
+			sourceTree = "<group>";
+		};
+		043B4395245CCA2800A5E704 /* PickerView */ = {
+			isa = PBXGroup;
+			children = (
+				043B4397245CCA3E00A5E704 /* GenericPickerViewController.swift */,
+				043B4398245CCA3E00A5E704 /* GenericPickerViewController.xib */,
+				043B4396245CCA3E00A5E704 /* GenericPickerViewDelegate.swift */,
+			);
+			path = PickerView;
+			sourceTree = "<group>";
+		};
+		047AC6A1245CCD7D00D07A1D /* Add Server */ = {
+			isa = PBXGroup;
+			children = (
+				047AC6A2245CCD9300D07A1D /* AddServerViewController.swift */,
+				047AC6A3245CCD9300D07A1D /* AddServerViewController.xib */,
+			);
+			path = "Add Server";
+			sourceTree = "<group>";
+		};
+		047AC6A6245CD95E00D07A1D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				047AC6A7245CD97400D07A1D /* UITextField+ClearStyling.swift */,
+				047AC6AB245F7DE500D07A1D /* Alamofire+TypedJSONResponse.swift */,
+				042E26DB245F8B1B005CFFC9 /* UIButton+Combine.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		043B4360245B9CFE00A5E704 /* ServerFullnessChecker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 043B4380245B9CFF00A5E704 /* Build configuration list for PBXNativeTarget "ServerFullnessChecker" */;
+			buildPhases = (
+				043B435D245B9CFE00A5E704 /* Sources */,
+				043B435E245B9CFE00A5E704 /* Frameworks */,
+				043B435F245B9CFE00A5E704 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ServerFullnessChecker;
+			packageProductDependencies = (
+				043B438D245C91F700A5E704 /* Alamofire */,
+				0425FFE424660171000BB91B /* Kingfisher */,
+			);
+			productName = ServerFullnessChecker;
+			productReference = 043B4361245B9CFE00A5E704 /* BF Server Checker.app */;
+			productType = "com.apple.product-type.application";
+		};
+		043B4376245B9CFF00A5E704 /* ServerFullnessCheckerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 043B4383245B9CFF00A5E704 /* Build configuration list for PBXNativeTarget "ServerFullnessCheckerTests" */;
+			buildPhases = (
+				043B4373245B9CFF00A5E704 /* Sources */,
+				043B4374245B9CFF00A5E704 /* Frameworks */,
+				043B4375245B9CFF00A5E704 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				043B4379245B9CFF00A5E704 /* PBXTargetDependency */,
+			);
+			name = ServerFullnessCheckerTests;
+			productName = ServerFullnessCheckerTests;
+			productReference = 043B4377245B9CFF00A5E704 /* ServerFullnessCheckerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		043B4359245B9CFE00A5E704 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = "Jing Wei Li";
+				TargetAttributes = {
+					043B4360245B9CFE00A5E704 = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+					043B4376245B9CFF00A5E704 = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = 043B4360245B9CFE00A5E704;
+					};
+				};
+			};
+			buildConfigurationList = 043B435C245B9CFE00A5E704 /* Build configuration list for PBXProject "ServerFullnessChecker" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 043B4358245B9CFE00A5E704;
+			packageReferences = (
+				043B438C245C91F700A5E704 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				0425FFE324660171000BB91B /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
+			productRefGroup = 043B4362245B9CFE00A5E704 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				043B4360245B9CFE00A5E704 /* ServerFullnessChecker */,
+				043B4376245B9CFF00A5E704 /* ServerFullnessCheckerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		043B435F245B9CFE00A5E704 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				043B4371245B9CFF00A5E704 /* LaunchScreen.storyboard in Resources */,
+				043B436E245B9CFF00A5E704 /* Assets.xcassets in Resources */,
+				042E26E1245F9591005CFFC9 /* ServerTableViewCell.xib in Resources */,
+				047AC6A5245CCD9300D07A1D /* AddServerViewController.xib in Resources */,
+				043B439B245CCA3E00A5E704 /* GenericPickerViewController.xib in Resources */,
+				043B436C245B9CFE00A5E704 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		043B4375245B9CFF00A5E704 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		043B435D245B9CFE00A5E704 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				043B4393245CA3CE00A5E704 /* BattlefieldServer.swift in Sources */,
+				047AC6AC245F7DE500D07A1D /* Alamofire+TypedJSONResponse.swift in Sources */,
+				047AC6A4245CCD9300D07A1D /* AddServerViewController.swift in Sources */,
+				043B4390245C94B100A5E704 /* ServerResponse.swift in Sources */,
+				047AC6AA245F7D5500D07A1D /* MutedResponse.swift in Sources */,
+				043B4399245CCA3E00A5E704 /* GenericPickerViewDelegate.swift in Sources */,
+				043B4389245B9F5600A5E704 /* NotificationHandler.swift in Sources */,
+				042E26DC245F8B1B005CFFC9 /* UIButton+Combine.swift in Sources */,
+				043B4365245B9CFE00A5E704 /* AppDelegate.swift in Sources */,
+				047AC6AE245F83B200D07A1D /* ServersViewController.swift in Sources */,
+				042E26E0245F9591005CFFC9 /* ServerTableViewCell.swift in Sources */,
+				043B438B245C8F0400A5E704 /* ServerTrackerAPI.swift in Sources */,
+				049EC7ED245F999600E2A83E /* Game.swift in Sources */,
+				0425FFE22465F925000BB91B /* BattlelogServer.swift in Sources */,
+				047AC6A8245CD97400D07A1D /* UITextField+ClearStyling.swift in Sources */,
+				043B4367245B9CFE00A5E704 /* SceneDelegate.swift in Sources */,
+				043B439A245CCA3E00A5E704 /* GenericPickerViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		043B4373245B9CFF00A5E704 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				043B437C245B9CFF00A5E704 /* ServerFullnessCheckerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		043B4379245B9CFF00A5E704 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 043B4360245B9CFE00A5E704 /* ServerFullnessChecker */;
+			targetProxy = 043B4378245B9CFF00A5E704 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		043B436A245B9CFE00A5E704 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				043B436B245B9CFE00A5E704 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		043B436F245B9CFF00A5E704 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				043B4370245B9CFF00A5E704 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		043B437E245B9CFF00A5E704 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		043B437F245B9CFF00A5E704 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		043B4381245B9CFF00A5E704 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = ServerFullnessChecker/ServerFullnessChecker.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NDBTK98VL3;
+				INFOPLIST_FILE = ServerFullnessChecker/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jingweili.ServerFullnessChecker;
+				PRODUCT_NAME = "BF Server Checker";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		043B4382245B9CFF00A5E704 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = ServerFullnessChecker/ServerFullnessChecker.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NDBTK98VL3;
+				INFOPLIST_FILE = ServerFullnessChecker/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jingweili.ServerFullnessChecker;
+				PRODUCT_NAME = "BF Server Checker";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		043B4384245B9CFF00A5E704 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NDBTK98VL3;
+				INFOPLIST_FILE = ServerFullnessCheckerTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jingweili.ServerFullnessCheckerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ServerFullnessChecker.app/ServerFullnessChecker";
+			};
+			name = Debug;
+		};
+		043B4385245B9CFF00A5E704 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NDBTK98VL3;
+				INFOPLIST_FILE = ServerFullnessCheckerTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jingweili.ServerFullnessCheckerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ServerFullnessChecker.app/ServerFullnessChecker";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		043B435C245B9CFE00A5E704 /* Build configuration list for PBXProject "ServerFullnessChecker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				043B437E245B9CFF00A5E704 /* Debug */,
+				043B437F245B9CFF00A5E704 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		043B4380245B9CFF00A5E704 /* Build configuration list for PBXNativeTarget "ServerFullnessChecker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				043B4381245B9CFF00A5E704 /* Debug */,
+				043B4382245B9CFF00A5E704 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		043B4383245B9CFF00A5E704 /* Build configuration list for PBXNativeTarget "ServerFullnessCheckerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				043B4384245B9CFF00A5E704 /* Debug */,
+				043B4385245B9CFF00A5E704 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		0425FFE324660171000BB91B /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.13.4;
+			};
+		};
+		043B438C245C91F700A5E704 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		0425FFE424660171000BB91B /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0425FFE324660171000BB91B /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+		043B438D245C91F700A5E704 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 043B438C245C91F700A5E704 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 043B4359245B9CFE00A5E704 /* Project object */;
+}
