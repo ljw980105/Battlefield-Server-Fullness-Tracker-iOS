@@ -33,6 +33,10 @@ struct BattlelogServerDetails: Codable {
     let name: String
     // skipped settings
     let country: String
+    
+    func imageURLFor(game: String) -> URL? {
+        return URL(string: "https://eaassets-a.akamaihd.net/bl-cdn/cdnprefix/production-284-20170531/public/base/\(game)/map_images/146x79/\(map.lowercased()).jpg")
+    }
 }
 
 struct BattlelogExtendedInfo: Codable {

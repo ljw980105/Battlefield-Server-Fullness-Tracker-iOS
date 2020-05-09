@@ -33,10 +33,6 @@ class ServersViewController: UIViewController {
         refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
         refreshControl.addTarget(self, action: #selector(refresh), for: .valueChanged)
         tableView.refreshControl = refreshControl
-        
-        ServerTrackerAPI.getDetailForServerWithId("822859e5-2456-4d2a-938c-b18000f71dab")
-            .sink(receiveCompletion: { _ in }, receiveValue: { print($0)})
-            .store(in: &disposeBag)
     }
     
     // MARK: - IBAction
@@ -113,6 +109,12 @@ extension ServersViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 60
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        let vc = ServerDetailsViewController(server: servers[indexPath.row])
+        navigationController?.pushViewController(vc, animated: true)
     }
     
     

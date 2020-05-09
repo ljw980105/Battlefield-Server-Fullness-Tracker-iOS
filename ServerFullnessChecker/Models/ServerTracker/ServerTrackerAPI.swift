@@ -99,9 +99,9 @@ class ServerTrackerAPI {
     }
     
     // MARK: - Server Details
-    class func getDetailForServerWithId(_ id: String) -> Future<BattlelogServer, Error> {
+    class func getDetailForServerWithId(_ id: String, game: String) -> Future<BattlelogServer, Error> {
         return AF.requestTyped(
-            endpoint: "https://battlelog.battlefield.com/bf3/servers/show/pc/\(id)",
+            endpoint: "https://battlelog.battlefield.com/\(game)/servers/show/pc/\(id)",
             method: .get,
             parameters: nil,
             headers: ["Content-Type": "application/json"])
@@ -120,6 +120,12 @@ class ServerTrackerAPI {
             }
             return nil
         }
+    }
+    
+    class func getPlayersOnServer(_ server: BattlefieldServer) -> Future<BattlelogPlayer, Error> {
+        return AF.requestTyped(
+            endpoint: "https://battlelog.battlefield.com/\(server.game)/servers/getPlayersOnServer/pc/\(server.id)/",
+            method: .get, parameters: nil, headers: ["Content-Type": "application/json"])
     }
 
             
